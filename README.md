@@ -122,7 +122,7 @@ Measured on our setup — a single **NVIDIA GeForce RTX 5080** GPU, with PyTorch
 on Ubuntu 22.04. The training times for each model are reported in the table below.
 
 | Step | Model | Total per run |
-|------|-------|:---------------------:|:----------------------------------------:|
+|------|-------:----------------------------------------:|
 | **Train** | Logistic regression        | ~4.9 min  |
 | **Train** | 5-layer MLP (`mlp_medium`) | ~5.7 min  |
 | **Train** | 7-layer MLP (`mlp_large`)  | ~6.0 min  |
