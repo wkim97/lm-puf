@@ -11,15 +11,14 @@ within **33.2 % Hamming distance** of the true response (reported as *instance a
 
 | `model_type`  | Description                         |
 |---------------|-------------------------------------|
-| `regression`  | Logistic regression (single layer)  |
+| `regression`  | Logistic regression                 |
 | `mlp_medium`  | 5-layer MLP                         |
 | `mlp_large`   | 7-layer MLP                         |
 | `mlp_xlarge`  | 9-layer MLP                         |
-| `cnn1d`       | 1-D CNN over the 5 features         |
-| `transformer` | Transformer encoder over 5 tokens   |
+| `cnn1d`       | 1-D CNN                             |
+| `transformer` | Transformer encoder                 |
 
-The conditional **GAN** predictor lives separately in `scripts/train_gan.py` /
-`scripts/test_gan.py` (its generator acts as a deterministic predictor at inference).
+The conditional **GAN** predictor lives separately in `scripts/train_gan.py` and `scripts/test_gan.py`.
 
 ## Layout
 
@@ -45,9 +44,8 @@ lm-puf/
 ## 1. System requirements
 
 **Operating system**
-- Linux (developed and tested on Ubuntu 22.04 LTS, kernel 5.15). macOS and Windows are not
-  officially tested; the code is pure Python/PyTorch and is expected to work where PyTorch is
-  available, but the pinned `environment.yml` resolves Linux-only packages.
+- Linux (developed and tested on Ubuntu 22.04 LTS). The code is in Python/PyTorch
+  and is expected to work where PyTorch is available.
 
 **Software dependencies** (pinned in `environment.yml`; key versions)
 - Python 3.11.15
@@ -65,9 +63,7 @@ lm-puf/
 - The code auto-selects CUDA when a compatible NVIDIA GPU is present and falls back to CPU
   otherwise. A GPU is strongly recommended for the full dataset / full ratio sweep (the deep
   models train over hundreds of thousands of samples).
-- Generating the *raw* dataset from IR captures (`curate_dataset.py`) is the most memory-heavy
-  step; ≥16 GB RAM is recommended there.
-
+  
 ---
 
 ## 2. Installation guide
@@ -123,36 +119,24 @@ Useful flags (see `python scripts/train.py --help`): `--model_type`, `--featurel
 ### Expected run time
 
 Measured on our setup — a single **NVIDIA GeForce RTX 5080** GPU, with PyTorch 2.11.0 (CUDA 13.0)
-on Ubuntu 22.04. Each script first loads and filters the full `data_dict.npy` (~1.6 GB), which
-takes **~2.5 minutes** and is CPU-bound; this is incurred once per invocation, before training or
-testing. Training uses the default 150,000-sample training set (586 batches/epoch) for the **full
-100 epochs**; the test split is 663 samples. The 100-epoch figures below are extrapolated from one
-measured epoch of the real training loop (×100); a single epoch already includes per-batch data
-loading and host→GPU transfer.
+on Ubuntu 22.04. The training times for each model are reported in the table below.
 
-| Step | Model | Training (100 epochs) | Total per run (incl. ~2.5 min data load) |
+| Step | Model | Total per run |
 |------|-------|:---------------------:|:----------------------------------------:|
-| **Train** | Logistic regression        | ~2.4 min | ~4.9 min  |
-| **Train** | 5-layer MLP (`mlp_medium`) | ~3.2 min | ~5.7 min  |
-| **Train** | 7-layer MLP (`mlp_large`)  | ~3.5 min | ~6.0 min  |
-| **Train** | 9-layer MLP (`mlp_xlarge`) | ~9.8 min | ~12.3 min |
-| **Train** | 1D CNN (`cnn1d`)           | ~3.6 min | ~6.1 min  |
-| **Train** | Transformer                | ~9.3 min | ~11.8 min |
-| **Test**  | any (forward pass only)    | <1 s     | ~2.5 min (dominated by data load) |
+| **Train** | Logistic regression        | ~4.9 min  |
+| **Train** | 5-layer MLP (`mlp_medium`) | ~5.7 min  |
+| **Train** | 7-layer MLP (`mlp_large`)  | ~6.0 min  |
+| **Train** | 9-layer MLP (`mlp_xlarge`) | ~12.3 min |
+| **Train** | 1D CNN (`cnn1d`)           | ~6.1 min  |
+| **Train** | Transformer                | ~11.8 min |
 
-The run-time is modest because each instance is just 5 input features mapped to a 1024-bit output,
-so even 150k samples × 100 epochs is computationally light. On a typical desktop GPU, expect compute
-to be ~2–4× slower; CPU-only training of the full set runs considerably longer. Running the complete
-sweep (`scripts/train.sh` / `test.sh`, see below) reloads the data for every run and takes
-**several hours** end-to-end.
 
 ### Data (real dataset)
 
 The full dataset is available from this repository's **GitHub Releases**. `data_dict.npy` holds
 every record with a `split` field (`train`/`test`), so the loaders select the split internally —
-no separate files are needed. Because the file is ~1.6 GB (over GitHub's 100 MB per-file limit for
-normal commits), it is distributed as a release asset rather than committed to the tree. Download
-it into `data/`:
+no separate files are needed. Because the file is ~1.6 GB, it is distributed as a release asset 
+rather than committed to the tree. Download it into `data/`:
 
 ```bash
 wget -O data/data_dict.npy \
