@@ -50,9 +50,16 @@ conda activate puf
 ## Data
 
 `data/data_dict.npy` holds every record with a `split` field (`train`/`test`), so the loaders
-select the split internally — no separate files are needed. The file is large and is **not**
-committed; place it under `data/` (or regenerate it from raw captures with
-`python data/curate_dataset.py`).
+select the split internally — no separate files are needed. The file is ~1.5 GB and exceeds
+GitHub's 100 MB limit, so it is **not** committed; it is published as a release asset instead.
+Download it into `data/`:
+
+```bash
+wget -O data/data_dict.npy \
+  https://github.com/wkim97/lm-puf/releases/download/v1.0/data_dict.npy
+```
+
+Alternatively, regenerate it from the raw captures with `python data/curate_dataset.py`.
 
 ## Train
 
