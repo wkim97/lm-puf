@@ -59,8 +59,6 @@ wget -O data/data_dict.npy \
   https://github.com/wkim97/lm-puf/releases/download/v1.0/data_dict.npy
 ```
 
-Alternatively, regenerate it from the raw captures with `python data/curate_dataset.py`.
-
 ## Train
 
 ```bash
