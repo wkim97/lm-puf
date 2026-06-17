@@ -1,0 +1,2 @@
+# Large dataset (1.5 GB) — exceeds GitHub's 100 MB limit; distribute via a Release.
+*.npy
