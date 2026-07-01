@@ -1,6 +1,6 @@
 # lm-puf
 
-Machine-learning modeling attacks against an optical/thermal PUF. Each instance maps
+Machine-learning modeling attacks against LM-PUF. Each instance maps
 **5 temperature features** `[begin_temp, end_temp, substrate_temp, win_min_temp, win_max_temp]`
 to a **1024-bit response**. An attack is counted as successful when the predicted response is
 within **33.2 % Hamming distance** of the true response (reported as *instance accuracy*).
