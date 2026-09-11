@@ -1,5 +1,7 @@
 # lm-puf
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22703086.svg)](https://doi.org/10.5281/zenodo.22703086)
+
 Machine-learning modeling attacks against LM-PUF. Each instance maps
 **5 temperature features** `[begin_temp, end_temp, substrate_temp, win_min_temp, win_max_temp]`
 to a **1024-bit response**. An attack is counted as successful when the predicted response is
@@ -198,6 +200,36 @@ column continues from the decoy 100 % setting.
 | **DL** — Transformer        | 0.4887 | 0.3454 | 0.1946 | 0.0941 | 0.0271 | 0.0000 |
 | **Classical** — Logistic regression | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
 | **Generative** — GAN        | 0.2232 | 0.0995 | 0.0045 | 0.0000 | 0.0000 | 0.0000 |
+
+---
+
+## Citation
+
+This repository is archived on Zenodo. If you use this code, please cite both the paper and
+the software archive.
+
+**Software**
+
+> W. J. Kim, *lm-puf: Machine-learning modeling attacks against liquid-metal
+> physical unclonable functions (LM-PUF)*, GitHub repository `wkim97/lm-puf`, Zenodo (2026);
+> https://doi.org/10.5281/zenodo.22703087
+
+```bibtex
+@software{kim_lmpuf_2026,
+  author    = {Kim, Woo Jae},
+  title     = {lm-puf: Machine-learning modeling attacks against liquid-metal
+               physical unclonable functions (LM-PUF)},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {v1.1},
+  doi       = {10.5281/zenodo.22703087},
+  url       = {https://github.com/wkim97/lm-puf}
+}
+```
+
+`10.5281/zenodo.22703087` is the version DOI for release **v1.1** — cite this one to point at the
+exact code used. `10.5281/zenodo.22703086` is the concept DOI, which always resolves to the latest
+version. Machine-readable metadata lives in [`CITATION.cff`](CITATION.cff).
 
 ---
 

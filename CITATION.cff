@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "lm-puf: Machine-learning modeling attacks against liquid-metal physical unclonable functions (LM-PUF)"
+abstract: >-
+  Code for evaluating the robustness of liquid-metal physical unclonable
+  functions (LM-PUFs) against machine-learning modeling attacks. Classical
+  (logistic regression), deep (MLP, 1-D CNN, Transformer) and generative (GAN)
+  attackers are trained to map five temperature features to a 1024-bit
+  response, and are swept over decoy-key and featureless-key ratios to quantify
+  the digital-cloning resistance of the device.
+authors:
+  - family-names: Kim
+    given-names: Woo Jae
+    affiliation: "School of Computing, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Republic of Korea"
+repository-code: "https://github.com/wkim97/lm-puf"
+url: "https://github.com/wkim97/lm-puf"
+license: Apache-2.0
+version: v1.1
+date-released: "2026-09-11"
+doi: 10.5281/zenodo.22703087
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22703086
+    description: Concept DOI resolving to the latest version of this software.
+  - type: doi
+    value: 10.5281/zenodo.22703087
+    description: Version DOI for release v1.1.
+keywords:
+  - physical unclonable function
+  - liquid metal
+  - hardware security
+  - machine-learning modeling attack
+  - anti-counterfeiting

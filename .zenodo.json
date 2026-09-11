@@ -1,0 +1,30 @@
+{
+  "upload_type": "software",
+  "title": "lm-puf: Machine-learning modeling attacks against liquid-metal physical unclonable functions (LM-PUF)",
+  "description": "<p>Code for evaluating the robustness of liquid-metal physical unclonable functions (LM-PUFs) against machine-learning modeling attacks. Each instance maps five temperature features to a 1024-bit response; an attack counts as successful when the predicted response falls within 33.2% Hamming distance of the true response. Classical (logistic regression), deep (5/7/9-layer MLP, 1-D CNN, Transformer) and generative (conditional GAN) attackers are trained and swept over decoy-key and featureless-key ratios to quantify digital-cloning resistance.</p><p>This is the software archive accompanying the paper &quot;Liquid-Metal Physical Unclonable Functions Resistant to Both Physical and Digital Cloning&quot;.</p>",
+  "creators": [
+    {
+      "name": "Kim, Woo Jae",
+      "affiliation": "School of Computing, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Republic of Korea"
+    }
+  ],
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "keywords": [
+    "physical unclonable function",
+    "liquid metal",
+    "hardware security",
+    "machine-learning modeling attack",
+    "anti-counterfeiting",
+    "deep learning"
+  ],
+  "version": "v1.1",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/wkim97/lm-puf",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ]
+}
