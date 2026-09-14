@@ -10,9 +10,15 @@ abstract: >-
   response, and are swept over decoy-key and featureless-key ratios to quantify
   the digital-cloning resistance of the device.
 authors:
+  - family-names: Lee
+    given-names: Simok
+    affiliation: "School of Electrical Engineering, Korea Advanced Institute of Science and Technology (KAIST), Daejeon 34141, Republic of Korea"
+  - family-names: Kim
+    given-names: Min Seok
+    affiliation: "School of Electrical Engineering and Computer Science, Gwangju Institute of Science and Technology (GIST), Gwangju 61005, Republic of Korea"
   - family-names: Kim
     given-names: Woo Jae
-    affiliation: "School of Computing, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Republic of Korea"
+    affiliation: "School of Computing, Korea Advanced Institute of Science and Technology (KAIST), Daejeon 34141, Republic of Korea"
 repository-code: "https://github.com/wkim97/lm-puf"
 url: "https://github.com/wkim97/lm-puf"
 license: Apache-2.0

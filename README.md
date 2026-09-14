@@ -220,13 +220,13 @@ the software archive.
 
 **Software**
 
-> W. J. Kim, *lm-puf: Machine-learning modeling attacks against liquid-metal
+> S. Lee, M. S. Kim, W. J. Kim, *lm-puf: Machine-learning modeling attacks against liquid-metal
 > physical unclonable functions (LM-PUF)*, GitHub repository `wkim97/lm-puf`, Zenodo (2026);
 > https://doi.org/10.5281/zenodo.22703086
 
 ```bibtex
 @software{kim_lmpuf_2026,
-  author    = {Kim, Woo Jae},
+  author    = {Lee, Simok and Kim, Min Seok and Kim, Woo Jae},
   title     = {lm-puf: Machine-learning modeling attacks against liquid-metal
                physical unclonable functions (LM-PUF)},
   year      = {2026},

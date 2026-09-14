@@ -4,8 +4,16 @@
   "description": "<p>Code for evaluating the robustness of liquid-metal physical unclonable functions (LM-PUFs) against machine-learning modeling attacks. Each instance maps five temperature features to a 1024-bit response; an attack counts as successful when the predicted response falls within 33.2% Hamming distance of the true response. Classical (logistic regression), deep (5/7/9-layer MLP, 1-D CNN, Transformer) and generative (conditional GAN) attackers are trained and swept over decoy-key and featureless-key ratios to quantify digital-cloning resistance.</p><p>This is the software archive accompanying the paper &quot;Liquid-Metal Physical Unclonable Functions Resistant to Both Physical and Digital Cloning&quot;.</p>",
   "creators": [
     {
+      "name": "Lee, Simok",
+      "affiliation": "School of Electrical Engineering, Korea Advanced Institute of Science and Technology (KAIST), Daejeon 34141, Republic of Korea"
+    },
+    {
+      "name": "Kim, Min Seok",
+      "affiliation": "School of Electrical Engineering and Computer Science, Gwangju Institute of Science and Technology (GIST), Gwangju 61005, Republic of Korea"
+    },
+    {
       "name": "Kim, Woo Jae",
-      "affiliation": "School of Computing, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, Republic of Korea"
+      "affiliation": "School of Computing, Korea Advanced Institute of Science and Technology (KAIST), Daejeon 34141, Republic of Korea"
     }
   ],
   "license": "Apache-2.0",
