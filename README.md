@@ -38,8 +38,18 @@ lm-puf/
 │   ├── train_gan.py
 │   ├── test.py,  test.sh        # evaluate checkpoints on the held-out test split
 │   └── test_gan.py
+├── lm-puf-extractor-analyzer/   # upstream: raw IR video -> 1024-bit responses -> PUF metrics
+│   ├── python/                  # Steps 1-4 (Count2Temp, samplematcher, execute, hd_analyzer_min)
+│   ├── matlab/                  # Steps 2-4, MATLAB equivalents (+ lib/puf_*.m)
+│   └── README.md                # full usage guide for the extractor / analyzer
 └── environment.yml
 ```
+
+The repository covers the full pipeline. `lm-puf-extractor-analyzer/` turns raw FLIR radiometric
+`.seq` captures into 1024-bit responses and evaluates the standard PUF figures of merit; everything
+above it consumes those responses to mount and evaluate machine-learning modeling attacks.
+`data/curate_dataset.py` picks up from the binarized `*_bin.png` / `.xlsx` files that the extractor
+writes.
 
 ---
 
@@ -212,7 +222,7 @@ the software archive.
 
 > W. J. Kim, *lm-puf: Machine-learning modeling attacks against liquid-metal
 > physical unclonable functions (LM-PUF)*, GitHub repository `wkim97/lm-puf`, Zenodo (2026);
-> https://doi.org/10.5281/zenodo.22703087
+> https://doi.org/10.5281/zenodo.22703086
 
 ```bibtex
 @software{kim_lmpuf_2026,
@@ -221,15 +231,15 @@ the software archive.
                physical unclonable functions (LM-PUF)},
   year      = {2026},
   publisher = {Zenodo},
-  version   = {v1.1},
-  doi       = {10.5281/zenodo.22703087},
+  version   = {v1.2},
+  doi       = {10.5281/zenodo.22703086},
   url       = {https://github.com/wkim97/lm-puf}
 }
 ```
 
-`10.5281/zenodo.22703087` is the version DOI for release **v1.1** — cite this one to point at the
-exact code used. `10.5281/zenodo.22703086` is the concept DOI, which always resolves to the latest
-version. Machine-readable metadata lives in [`CITATION.cff`](CITATION.cff).
+`10.5281/zenodo.22703086` is the concept DOI and always resolves to the latest release. Every
+release also gets its own version DOI — cite that one when you need to point at the exact code used.
+Machine-readable metadata lives in [`CITATION.cff`](CITATION.cff).
 
 ---
 
