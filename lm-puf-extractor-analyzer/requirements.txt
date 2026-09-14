@@ -1,0 +1,12 @@
+# Tested with Python 3.13.12 on Windows 11.
+numpy==2.3.0
+scipy==1.15.3
+pandas==3.0.2
+matplotlib==3.10.8
+opencv-python==4.11.0.86
+openpyxl==3.1.5
+
+# Step 1 (Count2Temp.py) additionally needs the FLIR Science File SDK
+# (Python package "FileSDK", imported as "fnv"). It is not on PyPI - install the
+# wheel shipped with the SDK installer, e.g.
+#   pip install "C:/Program Files/FLIR Systems/sdks/file/python/FileSDK-2024.7.1-cp313-cp313-win_amd64.whl"

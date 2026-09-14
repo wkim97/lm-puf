@@ -1,0 +1,19 @@
+name: puf-data
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13.12
+  - tk=8.6
+  - numpy=2.3.0
+  - scipy=1.15.3
+  - pandas=3.0.2
+  - matplotlib=3.10.8
+  - openpyxl=3.1.5
+  - pip
+  - pip:
+      - opencv-python==4.11.0.86
+      # Step 1 (Count2Temp.py) also needs the FLIR Science File SDK ("FileSDK",
+      # imported as "fnv"). It is not on PyPI - after "conda activate puf-data",
+      # install the wheel shipped with the SDK installer, e.g.
+      #   pip install "C:/Program Files/FLIR Systems/sdks/file/python/FileSDK-2024.7.1-cp313-cp313-win_amd64.whl"
