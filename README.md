@@ -222,7 +222,7 @@ the software archive.
 
 > S. Lee, M. S. Kim, W. J. Kim, *lm-puf: Machine-learning modeling attacks against liquid-metal
 > physical unclonable functions (LM-PUF)*, GitHub repository `wkim97/lm-puf`, Zenodo (2026);
-> https://doi.org/10.5281/zenodo.22703086
+> https://doi.org/10.5281/zenodo.22750168
 
 ```bibtex
 @software{kim_lmpuf_2026,
@@ -232,13 +232,15 @@ the software archive.
   year      = {2026},
   publisher = {Zenodo},
   version   = {v1.2},
-  doi       = {10.5281/zenodo.22703086},
+  doi       = {10.5281/zenodo.22750168},
   url       = {https://github.com/wkim97/lm-puf}
 }
 ```
 
-`10.5281/zenodo.22703086` is the concept DOI and always resolves to the latest release. Every
-release also gets its own version DOI — cite that one when you need to point at the exact code used.
+**Which DOI to use.** `10.5281/zenodo.22750168` is the version DOI for release v1.2 — it is frozen
+to that exact archive, so it is the one to cite in a paper. `10.5281/zenodo.22703086` (the badge
+above) is the concept DOI: it always resolves to the newest release, which makes it the right link
+for "this project" but the wrong one for a citation, since what it points at changes over time.
 Machine-readable metadata lives in [`CITATION.cff`](CITATION.cff).
 
 ---

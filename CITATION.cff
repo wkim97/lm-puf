@@ -24,8 +24,11 @@ url: "https://github.com/wkim97/lm-puf"
 license: Apache-2.0
 version: v1.2
 date-released: "2026-09-14"
-doi: 10.5281/zenodo.22703086
+doi: 10.5281/zenodo.22750168
 identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22750168
+    description: Version DOI for release v1.2 — cite this one.
   - type: doi
     value: 10.5281/zenodo.22703086
     description: Concept DOI resolving to the latest version of this software.
