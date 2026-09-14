@@ -1,6 +1,6 @@
 # lm-puf
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22703086-1682D4)](https://doi.org/10.5281/zenodo.22703086)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22750168-1682D4)](https://doi.org/10.5281/zenodo.22750168)
 
 Machine-learning modeling attacks against LM-PUF. Each instance maps
 **5 temperature features** `[begin_temp, end_temp, substrate_temp, win_min_temp, win_max_temp]`
@@ -237,11 +237,11 @@ the software archive.
 }
 ```
 
-**Which DOI to use.** `10.5281/zenodo.22750168` is the version DOI for release v1.2 — it is frozen
-to that exact archive, so it is the one to cite in a paper. `10.5281/zenodo.22703086` (the badge
-above) is the concept DOI: it always resolves to the newest release, which makes it the right link
-for "this project" but the wrong one for a citation, since what it points at changes over time.
-Machine-readable metadata lives in [`CITATION.cff`](CITATION.cff).
+**Which DOI to use.** `10.5281/zenodo.22750168` — the badge above, the citation, and
+[`CITATION.cff`](CITATION.cff) all carry it. It is the version DOI for release v1.2, frozen to that
+exact archive, which is what a citation needs. Zenodo also mints a concept DOI,
+`10.5281/zenodo.22703086`, that always resolves to the newest release; it is a convenient link to
+the project but a poor citation, because what it points at changes with every release.
 
 ---
 
