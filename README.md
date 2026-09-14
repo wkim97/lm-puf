@@ -1,6 +1,6 @@
 # lm-puf
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22703086.svg)](https://doi.org/10.5281/zenodo.22703086)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22703086-1682D4)](https://doi.org/10.5281/zenodo.22703086)
 
 Machine-learning modeling attacks against LM-PUF. Each instance maps
 **5 temperature features** `[begin_temp, end_temp, substrate_temp, win_min_temp, win_max_temp]`
